@@ -1,0 +1,265 @@
+.page-nav {
+    display:flex;
+    align-items:center;
+    gap:8px
+}
+.page-nav a {
+    padding:9px 12px;
+    border:1px solid transparent;
+    border-radius:8px;
+    color:#aeb7c8;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:700;
+    transition:color .2s,border-color .2s,background .2s
+}
+.page-nav a:hover,.page-nav a:focus-visible {
+    color:#fff;
+    border-color:var(--line);
+    outline:none
+}
+.page-nav a.active {
+    color:var(--gold);
+    background:#ffca5210;
+    border-color:#ffca5233
+}
+.members-shell {
+    padding-bottom:12px
+}
+.member-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px;
+    width:min(620px,100%);
+    margin:2px auto 8px
+}
+.miner-card {
+    position:relative;
+    min-width:0;
+    padding:22px 17px 18px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:15px;
+    background:linear-gradient(160deg,#222e45,#1a2437);
+    text-align:center;
+    transition:transform .2s,border-color .2s,box-shadow .2s
+}
+.miner-card:hover {
+    transform:translateY(-4px);
+    border-color:#ffca5277;
+    box-shadow:0 14px 30px #0003
+}
+.badge {
+    position:absolute;
+    top:12px;
+    right:12px;
+    padding:5px 8px;
+    border:1px solid #ffca524d;
+    border-radius:20px;
+    background:#ffca5214;
+    color:var(--gold);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.5px
+}
+.avatar-box {
+    display:grid;
+    width:76px;
+    height:76px;
+    place-items:center;
+    overflow:hidden;
+    margin:17px auto 13px;
+    border:2px solid #ffca52;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#57452a,#141e31 72%);
+    color:var(--gold);
+    font-size:30px;
+    box-shadow:0 0 22px #ffca5218
+}
+.avatar-box img {
+    width:100%;
+    height:100%;
+    border-radius:inherit;
+    object-fit:cover;
+    object-position:center 35%
+}
+.miner-name {
+    margin:0;
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    text-shadow:0 0 10px #fff4,0 0 18px #ffca5225
+}
+.miner-role {
+    margin:5px 0 15px;
+    color:#78d9a6;
+    font-size:12px;
+    font-weight:700
+}
+.info-list {
+    margin:0;
+    padding:12px;
+    border-radius:9px;
+    background:#141e31;
+    text-align:left
+}
+.info-list div {
+    display:grid;
+    grid-template-columns:76px minmax(0,1fr);
+    gap:7px;
+    padding:6px 0;
+    border-bottom:1px solid #ffffff0d;
+    font-size:11px;
+    line-height:1.45
+}
+.info-list div:last-child {
+    border:0;
+    padding-bottom:0
+}
+.info-list dt {
+    color:#aeb7c8;
+    font-weight:700
+}
+.info-list dd {
+    margin:0;
+    color:#e7eaf0;
+    overflow-wrap:anywhere
+}
+.game-intro-card {
+    position:relative;
+    display:grid;
+    grid-template-columns:76px minmax(0,1fr) auto;
+    align-items:center;
+    gap:18px;
+    overflow:hidden;
+    width:min(760px,100%);
+    margin:32px auto 10px;
+    padding:23px 25px;
+    border:1px solid #ffca5238;
+    border-radius:16px;
+    background:radial-gradient(ellipse at 8% 0%,#ffca521b,transparent 42%),linear-gradient(135deg,#202b40,#182237);
+    box-shadow:0 18px 42px #0003
+}
+.game-intro-mark {
+    display:grid;
+    width:68px;
+    height:68px;
+    place-items:center;
+    border:1px solid #ffca5266;
+    border-radius:18px;
+    background:#ffca5214;
+    color:var(--gold);
+    font-size:36px;
+    transform:rotate(-5deg)
+}
+.game-intro-copy .eyebrow {
+    font-size:9px
+}
+.game-intro-copy h2 {
+    margin:6px 0 7px;
+    color:#fff;
+    font-size:20px;
+    letter-spacing:1px;
+    text-shadow:0 0 12px #fff3
+}
+.game-intro-copy h2 span {
+    color:var(--gold);
+    text-shadow:0 0 8px #ffca5277,0 0 18px #ffca523d
+}
+.game-intro-copy p {
+    max-width:460px;
+    margin:0;
+    color:#aeb7c8;
+    font-size:12px;
+    line-height:1.6
+}
+.game-intro-copy p strong {
+    color:var(--gold)
+}
+.game-cta {
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    margin-top:14px;
+    padding:10px 14px;
+    border-radius:8px;
+    background:linear-gradient(135deg,#ffd66d,#f6ac34);
+    color:#35250e;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.7px;
+    transition:filter .2s,transform .2s
+}
+.game-cta:hover,.game-cta:focus-visible {
+    filter:brightness(1.08);
+    transform:translateY(-2px);
+    outline:2px solid #fff8;
+    outline-offset:2px
+}
+.game-cta span {
+    font-size:16px
+}
+.game-facts {
+    display:grid;
+    gap:8px;
+    min-width:84px
+}
+.game-facts div {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:8px 9px;
+    border:1px solid #ffffff12;
+    border-radius:9px;
+    background:#ffffff08
+}
+.game-facts strong {
+    color:var(--gold);
+    font-size:13px
+}
+.game-facts span {
+    margin-top:3px;
+    color:#9ba6b8;
+    font-size:9px
+}
+@media(max-width:580px) {
+    .page-nav {
+        gap:2px
+    }
+    .page-nav a {
+        padding:8px 7px;
+        font-size:10px
+    }
+    .member-grid {
+        grid-template-columns:1fr;
+        max-width:420px;
+        margin-right:auto;
+        margin-left:auto
+    }
+    .miner-card {
+        padding:20px
+    }
+
+}
+@media(max-width:680px) {
+    .game-intro-card {
+        grid-template-columns:56px minmax(0,1fr);
+        gap:12px;
+        padding:19px
+    }
+    .game-intro-mark {
+        width:54px;
+        height:54px;
+        font-size:28px;
+        border-radius:14px
+    }
+    .game-facts {
+        grid-column:1/-1;
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        min-width:0
+    }
+    .game-intro-copy h2 {
+        font-size:17px
+    }
+
+}

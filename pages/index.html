@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#151d30">
+    <title>Đào Vàng — Cuộc săn kho báu</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/game.css">
+</head>
+<body>
+    <main class="game-shell">
+        <header class="topbar">
+            <a class="brand" href="index.html" aria-label="Đào Vàng trang chủ"><span class="brand-icon">✦</span> GOLD<span>RUSH</span></a>
+            <nav class="page-nav" aria-label="Điều hướng chính">
+                <a class="active" href="index.html" aria-current="page">Trò chơi</a>
+                <a href="members.html">Thành viên</a>
+                <a href="contact.html">Liên hệ</a>
+            </nav>
+            <div class="top-note"><span class="live-dot"></span> MỎ ĐANG HOẠT ĐỘNG</div>
+            <div class="level-pill record-pill">KỶ LỤC <b id="bestScore">$0000</b></div>
+        </header>
+
+        <section class="intro">
+            <div class="eyebrow">⚒ CUỘC SĂN KHO BÁU BẮT ĐẦU</div>
+            <h1>ĐÀO <span>VÀNG</span></h1>
+            <p>Canh đúng hướng, thả móc thật chuẩn — kho báu đang chờ bạn!</p>
+        </section>
+
+        <section class="game-card" aria-label="Trò chơi đào vàng">
+            <div class="hud">
+                <div class="hud-stat"><span class="stat-icon coin-icon">◉</span><div><small>ĐIỂM SỐ</small><strong id="score">$0000</strong></div></div>
+                <div class="target"><span>MỤC TIÊU</span><strong id="target">$700</strong><div class="progress-track"><i id="progress"></i></div></div>
+                <div class="hud-stat timer-stat"><span class="stat-icon">◷</span><div><small>THỜI GIAN</small><strong id="timer">60<span>s</span></strong></div></div>
+            </div>
+
+            <div class="mine-wrap">
+                <canvas id="mine" aria-label="Mỏ vàng. Nhấn nút Thả móc để chơi." role="img"></canvas>
+                <div id="feverBadge" class="fever-badge" aria-live="polite" hidden></div>
+                <div id="toast" class="toast" aria-live="polite"></div>
+                <div class="overlay" id="overlay">
+                    <div class="overlay-card"><div class="overlay-pick">⚒</div><h2 id="overlay-title">SẴN SÀNG ĐÀO?</h2><p id="overlay-copy">Thu thập đủ <b>$700</b> trước khi hết giờ nhé!</p><button id="startBtn" class="primary-btn">BẮT ĐẦU CHƠI <span>→</span></button></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="hint"><span class="keycap">SPACE</span><span>hoặc nhấn nút để thả móc</span></div>
+                <button id="dropBtn" class="drop-btn" disabled><span class="hook-icon">↘</span> THẢ MÓC <span class="button-key">SPACE</span></button>
+                <button id="pauseBtn" class="pause-btn" type="button" disabled aria-label="Tạm dừng trò chơi" title="Tạm dừng">Ⅱ</button>
+                <button id="soundBtn" class="sound-btn" aria-label="Bật tắt âm thanh" title="Bật tắt âm thanh">♫</button>
+            </div>
+        </section>
+        <section class="bonus-tools" aria-label="Tùy chỉnh trò chơi">
+            <form id="targetForm" class="money-form">
+                <label for="targetAmount">Đặt mục tiêu ($)</label>
+                <div class="money-entry"><input id="targetAmount" type="number" min="1" step="1" inputmode="numeric" placeholder="Ví dụ: 5000" required><button type="submit">CẬP NHẬT MỤC TIÊU</button></div>
+                <small>Bạn có thể đổi mục tiêu thành bất kỳ số nguyên dương nào.</small>
+            </form>
+            <div class="gem-guide"><strong>Đá quý trong mỏ</strong><span>💎 Kim cương $500</span><span>🔴 Ruby $350</span><span>🟢 Emerald $400</span><span>🔵 Sapphire $300</span><span>🟣 Amethyst $450</span></div>
+        </section>
+        <footer><span>✦</span> MẸO: VÀNG LỚN ĐƯỢC NHIỀU ĐIỂM HƠN, NHƯNG NẶNG HƠN! <span>✦</span></footer>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+</html>

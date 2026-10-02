@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#151d30">
+    <title>Thành viên — GoldRush</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/members.css">
+    <link rel="stylesheet" href="../css/nav.css">
+</head>
+<body>
+    <main class="game-shell members-shell">
+        <header class="topbar">
+            <a class="brand" href="index.html" aria-label="GoldRush — trang chủ"><span class="brand-icon">✦</span> GOLD<span>RUSH</span></a>
+            <nav class="page-nav" aria-label="Điều hướng chính">
+                <a href="index.html">Trò chơi</a>
+                <a class="active" href="members.html" aria-current="page">Thành viên</a>
+                <a href="contact.html">Liên hệ</a>
+            </nav>
+        </header>
+
+        <section class="intro">
+            <div class="eyebrow">✦ ĐỘI NGŨ THỰC HIỆN DỰ ÁN</div>
+            <h1>ĐỘI NGŨ <span>GOLDRUSH</span></h1>
+            <p>Các thành viên thực hiện dự án bài tập lớn Thiết kế Web.</p>
+        </section>
+
+        <section class="member-grid" aria-label="Danh sách thành viên">
+            <article class="miner-card">
+                <span class="badge">ĐỘI TRƯỞNG</span>
+                <div class="avatar-box"><img src="../images/anh1.jpg" alt="Ảnh đại diện Vũ Văn Sang" loading="lazy"></div>
+                <h2 class="miner-name">Vũ Văn Sang</h2>
+                <p class="miner-role">Trưởng mỏ</p>
+                <dl class="info-list">
+                    <div><dt>MSSV</dt><dd>25005533</dd></div>
+                    <div><dt>Lớp</dt><dd>K16-CNTT</dd></div>
+                    <div><dt>Sở thích</dt><dd>Chơi game, nghe nhạc</dd></div>
+                    <div><dt>Nhiệm vụ</dt><dd>Xây dựng cơ chế móc kéo, tính điểm, thời gian và sự kiện Cơn sốt vàng bằng Canvas/JavaScript</dd></div>
+                </dl>
+            </article>
+            <article class="miner-card">
+                <span class="badge">ĐỘI PHÓ</span>
+                <div class="avatar-box"><img src="../images/anh2.jpg" alt="Ảnh đại diện Tạ Quang Quý" loading="lazy"></div>
+                <h2 class="miner-name">Tạ Quang Quý</h2>
+                <p class="miner-role">Phó mỏ</p>
+                <dl class="info-list">
+                    <div><dt>MSSV</dt><dd>25005469</dd></div>
+                    <div><dt>Lớp</dt><dd>K16-CNTT</dd></div>
+                    <div><dt>Sở thích</dt><dd>Vẽ UI/UX, đồ họa</dd></div>
+                    <div><dt>Nhiệm vụ</dt><dd>Thiết kế giao diện, dàn trang responsive cho các trang và kiểm thử biểu mẫu liên hệ</dd></div>
+                </dl>
+            </article>
+        </section>
+        <section class="game-intro-card" aria-labelledby="game-intro-title">
+            <div class="game-intro-mark" aria-hidden="true">⚒</div>
+            <div class="game-intro-copy">
+                <span class="eyebrow">SẴN SÀNG VÀO MỎ?</span>
+                <h2>MỘT PHÚT SĂN <span>KHO BÁU</span></h2>
+                <p>Canh hướng móc, nhặt vàng và kim cương để đạt mục tiêu <strong id="memberTargetAmount">$700</strong> trước khi hết giờ. Thời gian mỗi lượt thay đổi theo mục tiêu; đá ít điểm nhưng kéo lên chậm hơn!</p>
+            </div>
+            <div class="game-facts" aria-label="Thông tin màn chơi">
+                <div><strong id="memberTime">60s</strong><span>mỗi lượt</span></div>
+                <div><strong id="memberTargetFact">$700</strong><span>mục tiêu hiện tại</span></div>
+                <div><strong>SPACE</strong><span>thả móc</span></div>
+            </div>
+        </section>
+        <footer><span>✦</span> GOLD RUSH — TRÒ CHƠI ĐÀO VÀNG <span>✦</span></footer>
+    </main>
+    <script>
+        (() => {
+            const fallbackTarget = 700;
+            let target = fallbackTarget;
+            try {
+                const savedTarget = Number(localStorage.getItem('goldRushTarget'));
+                if (Number.isSafeInteger(savedTarget) && savedTarget > 0) target = savedTarget;
+            } catch {}
+            const time = Math.ceil(60 * Math.sqrt(target / fallbackTarget));
+            document.querySelector('#memberTargetAmount').textContent = `$${target}`;
+            document.querySelector('#memberTargetFact').textContent = `$${target}`;
+            document.querySelector('#memberTime').textContent = `${time}s`;
+        })();
+    </script>
+</body>
+</html>

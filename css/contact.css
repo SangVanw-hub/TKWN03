@@ -1,0 +1,122 @@
+.page-nav {
+    display:flex;
+    align-items:center;
+    gap:8px
+}
+.page-nav a {
+    padding:9px 12px;
+    border:1px solid transparent;
+    border-radius:8px;
+    color:#aeb7c8;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:700;
+    transition:color .2s,border-color .2s,background .2s
+}
+.page-nav a:hover,.page-nav a:focus-visible {
+    color:#fff;
+    border-color:var(--line);
+    outline:none
+}
+.page-nav a.active {
+    color:var(--gold);
+    background:#ffca5210;
+    border-color:#ffca5233
+}
+.contact-card {
+    width:min(520px,100%);
+    margin:0 auto;
+    padding:26px;
+    background:#1e293e;
+    border:1px solid rgba(255,255,255,.11);
+    border-radius:16px;
+    box-shadow:0 22px 70px rgba(0,0,0,.25)
+}
+.form-group {
+    margin-bottom:17px
+}
+.form-group label {
+    display:block;
+    margin-bottom:7px;
+    color:#e8c66f;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.9px
+}
+.form-group label span {
+    color:#ff9d75
+}
+.form-group input,.form-group textarea {
+    display:block;
+    width:100%;
+    padding:12px 13px;
+    border:1px solid #46536a;
+    border-radius:8px;
+    background:#141e31;
+    color:#f7f0df;
+    font:inherit;
+    font-size:14px;
+    transition:border-color .2s,box-shadow .2s;
+    resize:vertical
+}
+.form-group input::placeholder,.form-group textarea::placeholder {
+    color:#77849a
+}
+.form-group input:focus,.form-group textarea:focus {
+    outline:none;
+    border-color:var(--gold);
+    box-shadow:0 0 0 3px #ffca5220
+}
+.form-group .error {
+    border-color:#f27676
+}
+.error-msg {
+    display:block;
+    min-height:0;
+    margin-top:5px;
+    color:#ff9292;
+    font-size:12px
+}
+.error-msg:not(:empty) {
+    min-height:16px
+}
+.contact-submit {
+    width:100%;
+    justify-content:center;
+    min-height:44px
+}
+.contact-submit span {
+    font-size:18px
+}
+.success-alert {
+    margin-top:16px;
+    padding:12px 14px;
+    border:1px solid #68d8a166;
+    border-radius:9px;
+    background:#68d8a114;
+    color:#a5f0c6;
+    font-size:13px;
+    line-height:1.5
+}
+.success-alert[hidden] {
+    display:none
+}
+.form-note {
+    margin-top:15px;
+    color:#8995a9;
+    font-size:11px;
+    text-align:center
+}
+@media(max-width:580px) {
+    .page-nav {
+        gap:2px
+    }
+    .page-nav a {
+        padding:8px 7px;
+        font-size:10px
+    }
+    .contact-card {
+        padding:20px 16px
+    }
+
+}

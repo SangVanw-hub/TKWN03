@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#151d30">
+    <title>Liên hệ — GoldRush</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/nav.css">
+</head>
+<body>
+    <main class="game-shell">
+        <header class="topbar">
+            <a class="brand" href="index.html" aria-label="GoldRush — trang chủ"><span class="brand-icon">✦</span> GOLD<span>RUSH</span></a>
+            <nav class="page-nav" aria-label="Điều hướng chính">
+                <a href="index.html">Trò chơi</a>
+                <a href="members.html">Thành viên</a>
+                <a class="active" href="contact.html" aria-current="page">Liên hệ</a>
+            </nav>
+        </header>
+
+        <section class="intro">
+            <div class="eyebrow">✦ KẾT NỐI VỚI ĐỘI NGŨ</div>
+            <h1>LIÊN <span>HỆ</span></h1>
+            <p>Gửi góp ý hoặc lời nhắn cho đội ngũ phát triển GoldRush.</p>
+        </section>
+
+        <section class="contact-card" aria-label="Biểu mẫu liên hệ">
+            <form id="minerForm" novalidate>
+                <div class="form-group">
+                    <label for="fullname">HỌ VÀ TÊN <span aria-hidden="true">*</span></label>
+                    <input type="text" id="fullname" name="fullname" autocomplete="name" placeholder="Nhập họ và tên" aria-describedby="fullnameError" required>
+                    <small class="error-msg" id="fullnameError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">EMAIL <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="ten@example.com" aria-describedby="emailError" required>
+                    <small class="error-msg" id="emailError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">SỐ ĐIỆN THOẠI <span aria-hidden="true">*</span></label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="Số điện thoại 10 chữ số" aria-describedby="phoneError" required>
+                    <small class="error-msg" id="phoneError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="message">LỜI NHẮN / GÓP Ý <span aria-hidden="true">*</span></label>
+                    <textarea id="message" name="message" rows="4" placeholder="Bạn muốn chia sẻ điều gì?" aria-describedby="messageError" required></textarea>
+                    <small class="error-msg" id="messageError"></small>
+                </div>
+                <button type="submit" class="drop-btn contact-submit">GỬI LỜI NHẮN <span aria-hidden="true">→</span></button>
+            </form>
+            <div id="successAlert" class="success-alert" role="status" aria-live="polite" hidden>Cảm ơn bạn! Thông tin đã được kiểm tra hợp lệ.</div>
+            <p class="form-note">Các trường có dấu * là bắt buộc. Biểu mẫu hiện chỉ kiểm tra thông tin trên trình duyệt, chưa gửi dữ liệu tới máy chủ.</p>
+        </section>
+        <footer><span>✦</span> GOLD RUSH — TRÒ CHƠI ĐÀO VÀNG <span>✦</span></footer>
+    </main>
+    <script src="../js/contact.js"></script>
+</body>
+</html>
